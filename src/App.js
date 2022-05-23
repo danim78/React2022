@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Noticia from './components/Noticia';
+
+
 
 function App() {
   return (
@@ -18,6 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Noticia></Noticia>
     </div>
   );
 }
