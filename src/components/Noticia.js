@@ -5,11 +5,17 @@ function Noticia(props) {
         descripcion:"esto es una demostración de desestructuración de objetos"
     }
       
-    const {titulo, descripcion} = props
+    const {titulo, descripcion} = noticia
+
+    const increment = () => {
+        console.log("increment");
+    }
       
     return (
         <div className="mi-clase">
+            <button onClick={ increment }>+</button> {/* props.handleClick */}
             <h1 className='mi-titulo'>Mi noticia: {titulo} - {descripcion}</h1>
+            <h1 className='mi-titulo'>Mi noticia: {props.cont}</h1>
         </div>
     )
 }

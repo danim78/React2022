@@ -1,4 +1,5 @@
 import React, {Component, Fragment } from "react";
+import Noticia from "./Noticia";
 
 class Counter extends Component {
 
@@ -11,13 +12,15 @@ class Counter extends Component {
         };
 
         this.decrement = this.decrement.bind(this);
+        this.increment = this.increment.bind(this);
     }
 
     decrement(){
-
-        this.setState({
-            counter: this.state.counter -1
-        })
+        if (this.state.counter>0){
+            this.setState({
+                counter: this.state.counter -1
+            })
+        }
     }
 
     increment(){
@@ -35,7 +38,12 @@ class Counter extends Component {
                     <h1>{this.state.counter}</h1>
                     <button onClick={this.increment}>+</button>
                 </div>
+                <Noticia cont={this.state.counter} handleClick={ this.increment }></Noticia>
+                <Noticia cont={this.state.counter}></Noticia>
+                <Noticia cont={this.state.counter}></Noticia>
             </Fragment>
         )
     }
 }
+
+export default Counter
