@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.mi-clase {
+  color: red;
+}
+
+.mi-titulo {
+  background-color: aqua;
+}
+
+.titulo-verde{
+  color: green;
+}

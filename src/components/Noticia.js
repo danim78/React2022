@@ -1,17 +1,15 @@
 function Noticia(props) {
-
-    
+        
     const noticia = {
         titulo : "Curso react 2022",
         descripcion:"esto es una demostración de desestructuración de objetos"
     }
       
-    const {titulo, descripcion} = noticia
+    const {titulo, descripcion} = props
       
     return (
         <div className="mi-clase">
-        <h1 className='mi-titulo'>Mi noticia: {titulo}</h1>
-      
+            <h1 className='mi-titulo'>Mi noticia: {titulo} - {descripcion}</h1>
         </div>
     )
 }
