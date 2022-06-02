@@ -2,6 +2,7 @@ import React, {Component, Fragment } from "react";
 import Header from "../components/Header";
 import CreateForm from "../components/CreateForm"
 import CardComponent from "../components/CardComponent";
+import Cards from "../components/Cards";
 
 
 class Home extends Component {
@@ -30,8 +31,9 @@ class Home extends Component {
         return(
             <Fragment>
                 <Header></Header>
-                <CreateForm formValues={this.state.form} onChange={this.handleChange}></CreateForm>
-                <CardComponent titulo={this.state.form.titulo}></CardComponent>
+                {/* <CreateForm formValues={this.state.form} onChange={this.handleChange}></CreateForm>
+                <CardComponent titulo={this.state.form.titulo}></CardComponent> */}
+                <Cards></Cards>
             </Fragment>
         )
     }
