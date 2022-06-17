@@ -1,7 +1,8 @@
 import React, {Component, Fragment } from "react";
-import Header from "../components/Header";
 import CreateForm from "../components/CreateForm"
-import CardComponent from "../components/CardComponent";
+import CicloDeVida from "../components/CicloDeVida";
+import Lista from "../components/Lista";
+import ListaPersonajes from "../components/colletions/ListaPersonajes";
 
 
 class Home extends Component {
@@ -29,9 +30,10 @@ class Home extends Component {
         
         return(
             <Fragment>
-                <Header></Header>
-                <CreateForm formValues={this.state.form} onChange={this.handleChange}></CreateForm>
-                <CardComponent titulo={this.state.form.titulo}></CardComponent>
+                <ListaPersonajes></ListaPersonajes>
+                {/* <CreateForm formValues={this.state.form} onChange={this.handleChange}></CreateForm>
+                <CicloDeVida titulo={this.state.form.titulo}></CicloDeVida>
+                <Lista></Lista> */}
             </Fragment>
         )
     }
